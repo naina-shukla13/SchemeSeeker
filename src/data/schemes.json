@@ -1,0 +1,38 @@
+[
+  {
+    "name": "PM-Kisan Yojana",
+    "description": "₹6000 support for eligible farmers.",
+    "criteria": {
+      "state": ["Uttar Pradesh"],
+      "incomeMax": 300000,
+      "occupation": ["farmer"],
+      "ageMin": 18,
+      "ageMax": 60
+    },
+    "source": "Ministry of Agriculture",
+    "link": "https://www.pmkisan.gov.in/"
+  },
+  {
+    "name": "National Scholarship Scheme",
+    "description": "Scholarships for students below age 25.",
+    "criteria": {
+      "state": ["Uttar Pradesh"],
+       "incomeMax": 300000,
+      "occupation": ["student"],
+      "ageMax": 25
+    },
+    "source": "Ministry of Education",
+    "link": "https://www.scholarshiportal.com/"
+  },
+  {
+    "name": "Mahila Samman Yojana",
+    "description": "Support for women entrepreneurs and learners.",
+    "criteria": {
+        "state": ["Uttar Pradesh"],
+        "incomeMax": 300000,
+        "gender": ["female"]
+    },
+    "source": "Ministry of women",
+    "link": "https://www.mahilasamman.com/"
+  }
+]

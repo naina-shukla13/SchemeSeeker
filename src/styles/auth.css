@@ -1,0 +1,76 @@
+/* Reuse this for login too – clean, centered design */
+
+.auth-form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f9fc;
+  padding: 2rem;
+}
+
+.auth-form-container form {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-form-container h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #003366;
+  font-weight: 700;
+}
+
+.auth-form-container input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form-container input:focus {
+  border-color: #007acc;
+}
+
+.auth-form-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form-container button:hover {
+  background-color: #003d80;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+.auth-footer a {
+  color: #0056b3;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}

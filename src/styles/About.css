@@ -1,0 +1,28 @@
+.about-page {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+.about-page h2 {
+  font-size: 2rem;
+  color: #0a4d68;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-page h3 {
+  color: #157347;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.about-page ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}

@@ -1,0 +1,73 @@
+.eligibility-page {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background-color: #f0f8f6;
+}
+
+.eligibility-heading {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #003b4a;
+  margin-bottom: 30px;
+}
+
+.eligibility-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f7fdfc;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.eligibility-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0a4d68;
+  outline: none;
+}
+
+.eligibility-form button {
+  padding: 12px;
+  background-color: #157347;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.eligibility-form button:hover {
+  background-color: #0e5e3e;
+}
