@@ -31,5 +31,5 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 app.get("/api/test", (req, res) => {
-  res.json({ message: "Test route working!" });
+  res.json({ message: "API working fine" });
 });
