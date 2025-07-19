@@ -15,6 +15,7 @@ function App() {
   return (
     <>
     <Navbar />
+    <p>Welcome to SchemeSeeker - Discover your eligiblity schemes here!</p>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path='/eligibiltyform' element={<EligibiltyForm />} />
