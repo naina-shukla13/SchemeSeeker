@@ -8,6 +8,9 @@ import About from './pages/About';
 import Signup from './pages/signup';  
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
+import AllSchemes from './pages/Schemes';
+
 
 function App() {
   
@@ -15,7 +18,6 @@ function App() {
   return (
     <>
     <Navbar />
-    <p>Welcome to SchemeSeeker - Discover your eligiblity schemes here!</p>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path='/eligibiltyform' element={<EligibiltyForm />} />
@@ -24,6 +26,9 @@ function App() {
       <Route path='/signup' element={<Signup />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
+      <Route path='/dashboard' element={<Dashboard />} />
+      <Route path='/home' element={<Home />} />
+      <Route path='/schemes' element={<AllSchemes/>} />
 
     </Routes>
       

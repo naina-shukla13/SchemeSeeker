@@ -20,13 +20,13 @@ const Navbar = () => {
                 <nav className={showMenu ? "menu-mobile" : "menu-web" }>
                     <ul>
                         <li>
-                            <a href=''>Home</a>
+                            <Link to="/home">Home </Link>
                         </li>
                     <li>
                         <a href="/about">About</a>
                     </li>
                     <li>
-                        <a href="#">Schemes</a>
+                        <Link to="/schemes">Schemes</Link>
                     </li>
                 <li>
                     <a href="#">Language</a>

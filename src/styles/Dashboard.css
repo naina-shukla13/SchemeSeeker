@@ -1,118 +1,201 @@
 /* Dashboard.css */
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 .dashboard-container {
-  max-width: 600px;
+  max-width: 800px; /* Increase from 600px */
   margin: 40px auto;
-  background-color: #ffffff;
-  padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 3rem 4rem; /* Increase padding */
+  border-radius: 24px; /* Increase from 15px */
+  box-shadow: 0 15px 50px rgba(19,136,8,0.15);
+  border: 3px solid #138808;
+  animation: fadeInUp 0.8s ease;
 }
-
 .dashboard-heading {
-  font-size: 28px;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 4rem; /* Increase from 28px */
+  margin-bottom: 3rem; /* Increase margin */
+  color: #138808;
   text-align: center;
-  border-bottom: 2px solid #0066cc;
-  padding-bottom: 10px;
+  border-bottom: 4px solid #138808; /* Thicker border, green color */
+  padding-bottom: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(19,136,8,0.2);
+  animation: slideInDown 0.6s ease;
 }
 
 .section-title {
-  font-size: 20px;
-  margin: 30px 0 10px;
-  color: #222;
-  font-weight: 600;
+  font-size: 2.5rem; /* Increase from 20px */
+  margin: 3rem 0 1.5rem; /* Increase margins */
+  color: #138808;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  letter-spacing: 0.5px;
+  animation: fadeInLeft 0.6s ease;
 }
 
 .edit-btn {
-  background-color: #0066cc;
+  background: linear-gradient(135deg, #138808 0%, #16a085 100%);
   color: white;
   border: none;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 6px;
+  padding: 1rem 2rem; /* Increase padding */
+  font-size: 1.4rem; /* Increase from 14px */
+  font-weight: 600;
+  border-radius: 12px; /* Increase from 6px */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(19,136,8,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .edit-btn:hover {
-  background-color: #004ea2;
+  background: linear-gradient(135deg, #16a085 0%, #138808 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(19,136,8,0.4);
 }
-
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 2rem; /* Increase from 18px */
   display: flex;
   flex-direction: column;
+  animation: fadeInUp 0.6s ease;
 }
 
 .form-group label {
-  font-size: 15px;
-  margin-bottom: 6px;
-  color: #444;
+  font-size: 1.3rem; /* Increase from 15px */
+  margin-bottom: 0.8rem;
+  color: #138808;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .form-group input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: border 0.3s;
+  padding: 1.2rem; /* Increase from 10px */
+  border: 2px solid #e5e7eb;
+  border-radius: 12px; /* Increase from 6px */
+  font-size: 1.3rem; /* Increase from 14px */
+  transition: all 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(19,136,8,0.1);
 }
 
 .form-group input:focus {
-  border-color: #0066cc;
+  border-color: #138808;
   outline: none;
+  box-shadow: 0 4px 15px rgba(19,136,8,0.2);
+  transform: translateY(-1px);
 }
 
+.form-group input:disabled {
+  background: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
 .update-btn {
-  background-color: #28a745;
+  background: linear-gradient(135deg, #22c55e 0%, #16a085 100%);
   color: white;
   border: none;
-  padding: 10px 16px;
-  font-size: 15px;
-  border-radius: 6px;
+  padding: 1.2rem 2.5rem; /* Increase padding */
+  font-size: 1.3rem; /* Increase from 15px */
+  font-weight: 700;
+  border-radius: 12px;
   cursor: pointer;
-  margin-top: 10px;
-  margin-right: 10px;
-  transition: background-color 0.3s;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(34,197,94,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .update-btn:hover {
-  background-color: #218838;
+  background: linear-gradient(135deg, #16a085 0%, #22c55e 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(34,197,94,0.4);
 }
 
 .logout-btn {
-  background-color: #dc3545;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
   color: white;
   border: none;
-  padding: 0.5rem 1.2rem;
-  font-size: 15px;
-  border-radius: 6px;
+  padding: 1.2rem 2.5rem; /* Increase padding */
+  font-size: 1.3rem; /* Increase from 15px */
+  font-weight: 700;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(239,68,68,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .logout-btn:hover {
-  background-color: #c82333;
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(239,68,68,0.4);
 }
 
+.loading {
+  text-align: center;
+  font-size: 2rem; /* Increase from 18px */
+  color: #138808;
+  margin-top: 100px;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
 .dashboard-buttons {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 2rem;
 }
 
 .loading {

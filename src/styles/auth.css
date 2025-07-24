@@ -1,76 +1,438 @@
-/* Reuse this for login too – clean, centered design */
-
+/* --- Login Page Styles --- */
 .auth-form-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f9fc;
-  padding: 2rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #f0fdf4 100%);
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Background decoration */
+.auth-form-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(19,136,8,0.05) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 1;
+}
+
+.auth-form-container::after {
+  display: none;
+}
+
+/* Main form styling */
 .auth-form-container form {
-  background-color: #ffffff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  padding: 4rem 3.5rem;
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 60px rgba(19,136,8,0.15),
+    0 8px 32px rgba(19,136,8,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  border: 3px solid #138808;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
+  position: relative;
+  z-index: 10;
+  animation: slideInUp 0.8s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form-container form:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 25px 80px rgba(19,136,8,0.2),
+    0 12px 40px rgba(19,136,8,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+/* Form header */
+.auth-form-container form h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #138808;
   text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(19,136,8,0.2);
+  animation: fadeInDown 1s ease-out 0.2s both;
+  position: relative;
 }
 
-.auth-form-container h2 {
-  margin-bottom: 25px;
-  font-size: 28px;
-  color: #003366;
-  font-weight: 700;
+.auth-form-container form h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #138808 0%, #FF9933 100%);
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out 0.8s both;
 }
 
-.auth-form-container input {
+/* Input styling */
+.auth-form-container form input {
   width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 18px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #ffffff;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(19,136,8,0.05);
+  animation: fadeInLeft 0.8s ease-out both;
+  position: relative;
+}
+
+.auth-form-container form input:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.auth-form-container form input:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.auth-form-container form input:focus {
   outline: none;
-  transition: border-color 0.3s ease;
+  border-color: #138808;
+  box-shadow: 
+    0 0 0 4px rgba(19,136,8,0.1),
+    0 4px 16px rgba(19,136,8,0.15);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
 }
 
-.auth-form-container input:focus {
-  border-color: #007acc;
+.auth-form-container form input:hover {
+  border-color: #16a085;
+  box-shadow: 0 4px 12px rgba(19,136,8,0.1);
+  transform: translateY(-1px);
 }
 
-.auth-form-container button {
+.auth-form-container form input::placeholder {
+  color: #64748b;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-form-container form input:focus::placeholder {
+  color: #138808;
+  opacity: 0.8;
+}
+
+/* Button styling */
+.auth-form-container form button {
   width: 100%;
-  padding: 14px;
-  background-color: #0056b3;
-  color: white;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, #138808 0%, #16a085 100%);
+  color: #ffffff;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 16px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 6px 20px rgba(19,136,8,0.3),
+    0 2px 8px rgba(19,136,8,0.2);
+  letter-spacing: 0.5px;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+  position: relative;
+  overflow: hidden;
 }
 
-.auth-form-container button:hover {
-  background-color: #003d80;
+.auth-form-container form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
 }
 
+.auth-form-container form button:hover::before {
+  left: 100%;
+}
+
+.auth-form-container form button:hover {
+  background: linear-gradient(135deg, #16a085 0%, #138808 100%);
+  box-shadow: 
+    0 8px 30px rgba(19,136,8,0.4),
+    0 4px 16px rgba(19,136,8,0.3);
+  transform: translateY(-3px) scale(1.02);
+  letter-spacing: 1px;
+}
+
+.auth-form-container form button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 
+    0 4px 15px rgba(19,136,8,0.3),
+    0 2px 8px rgba(19,136,8,0.2);
+}
+
+/* Error message styling */
+.auth-error {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #dc2626;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid #fca5a5;
+  box-shadow: 0 4px 12px rgba(220,38,38,0.1);
+  animation: shakeIn 0.6s ease-out;
+}
+
+/* Footer link styling */
 .auth-footer {
-  margin-top: 20px;
-  font-size: 15px;
-  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+  color: #64748b;
+  font-size: 1.3rem;
+  animation: fadeIn 1s ease-out 0.8s both;
 }
 
 .auth-footer a {
-  color: #0056b3;
-  font-weight: 600;
+  color: #138808;
   text-decoration: none;
-  margin-left: 6px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  border: 2px solid transparent;
 }
 
 .auth-footer a:hover {
-  text-decoration: underline;
+  color: #ffffff;
+  background: linear-gradient(135deg, #138808 0%, #16a085 100%);
+  border-color: #FF9933;
+  text-decoration: none;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(19,136,8,0.3);
+}
+
+/* Loading state for button */
+.auth-form-container form button:disabled {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(148,163,184,0.2);
+}
+
+.auth-form-container form button:disabled::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auth-form-container {
+    padding: 1rem;
+  }
+  
+  .auth-form-container form {
+    padding: 3rem 2rem;
+    margin: 1rem;
+    max-width: 90%;
+  }
+  
+  .auth-form-container form h2 {
+    font-size: 2rem;
+  }
+  
+  .auth-form-container form input {
+    padding: 1.1rem 1.4rem;
+    font-size: 1.1rem;
+  }
+  
+  .auth-form-container form button {
+    padding: 1.3rem 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form-container form {
+    padding: 1.5rem 1rem;
+  }
+  
+  .auth-form-container form h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes shakeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Focus indicators for accessibility */
+.auth-form-container form input:focus-visible,
+.auth-form-container form button:focus-visible,
+.auth-footer a:focus-visible {
+  outline: 3px solid #FF9933;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .auth-form-container form {
+    border-width: 4px;
+  }
+  
+  .auth-form-container form input {
+    border-width: 3px;
+  }
+  
+  .auth-form-container form button {
+    border: 3px solid #138808;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .auth-form-container form,
+  .auth-form-container form h2,
+  .auth-form-container form input,
+  .auth-form-container form button,
+  .auth-footer {
+    animation: none;
+  }
+  
+  .auth-form-container::before {
+    animation: none;
+  }
+  
+  .auth-form-container::after {
+    animation: none;
+  }
 }

@@ -14,6 +14,7 @@ import img9 from '../assets/image 9.png'
 import img10 from '../assets/image 10.png'
 import img11 from '../assets/image 11.png'
 import About from './About';
+import AllSchemes from './Schemes';
 //import img12 from '../assets/image 12.png'
 const Home = () => {
     const navigate = useNavigate();
@@ -29,15 +30,15 @@ const Home = () => {
       <button className='hero-button' onClick={handleCheckEligibility}>
         
         <h1>Check Your Eligibilty</h1>
-       
       </button>
       </div>
       <div className="hero-right">
          <img src={heroImage} alt="Government help" />
       </div>
-      
     </div>
-
+    <div>
+      <AllSchemes />
+    </div>
     <div className='feature-section'>
         <div className='feature-card'> 
             <img src={img2} alt = "" />

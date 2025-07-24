@@ -1,28 +1,279 @@
+/* About Page Styles */
 .about-page {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 40px;
-  background-color: #fdfdfd;
-  border-radius: 12px;
-  font-family: 'Segoe UI', sans-serif;
-  color: #1c1c1c;
-  line-height: 1.6;
+  min-height: 100vh;
+  padding: 4rem 3rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  max-width: 100%;
+  margin: 0;
+  line-height: 1.7;
 }
 
+/* Main Heading */
 .about-page h2 {
-  font-size: 2rem;
-  color: #0a4d68;
-  margin-bottom: 20px;
   text-align: center;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #138808;
+  margin-bottom: 4rem;
+  letter-spacing: 1px;
 }
 
+/* Section Headings */
 .about-page h3 {
-  color: #157347;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #138808;
+  margin: 6rem 0 3rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 1rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.about-page h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #138808;
+}
+
+/* Paragraphs */
+.about-page p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 4rem;
+  text-align: justify;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+
+/* First paragraph - centered */
+.about-page p:first-of-type {
+  text-align: center;
+  font-size: 1.6rem;
+  max-width: 1200px;
+  margin: 0 auto 6rem auto;
+  color: #666;
+  font-weight: 500;
+}
+
+/* List Styling */
 .about-page ul {
-  padding-left: 20px;
-  list-style-type: disc;
+  list-style: none;
+  padding: 0;
+  margin: 3rem auto 6rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+}
+
+.about-page ul li {
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border: 2px solid #138808;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(19, 136, 8, 0.1);
+}
+
+.about-page ul li::before {
+  content: '✓';
+  background: #138808;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.about-page ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(19, 136, 8, 0.2);
+}
+
+/* How It Works Section - Special Styling */
+.about-page h3:last-of-type {
+  background: linear-gradient(135deg, #138808 0%, #16a085 100%);
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 0;
+  text-shadow: none;
+  margin-top: 6rem;
+  font-size: 2.2rem;
+}
+
+.about-page h3:last-of-type::after {
+  display: none;
+}
+
+.about-page p:last-of-type {
+  background: linear-gradient(135deg, #138808 0%, #16a085 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 0 0 20px 20px;
+  margin-top: 0;
+  font-size: 1.4rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(19, 136, 8, 0.3);
+  font-weight: 500;
+  margin-bottom: 6rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about-page {
+    padding: 3rem 2rem;
+  }
+  
+  .about-page h2 {
+    font-size: 3.5rem;
+  }
+  
+  .about-page h3 {
+    font-size: 2.2rem;
+  }
+  
+  .about-page p {
+    font-size: 1.3rem;
+  }
+  
+  .about-page p:first-of-type {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 2rem 1.5rem;
+  }
+  
+  .about-page h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
+  
+  .about-page h3 {
+    font-size: 1.8rem;
+    margin: 4rem 0 2rem 0;
+  }
+  
+  .about-page p {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  
+  .about-page p:first-of-type {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 4rem;
+  }
+  
+  .about-page ul {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem auto 4rem auto;
+  }
+  
+  .about-page ul li {
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .about-page ul li::before {
+    width: 28px;
+    height: 28px;
+    margin-right: 1rem;
+  }
+  
+  .about-page h3:last-of-type {
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+  }
+  
+  .about-page p:last-of-type {
+    padding: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding: 1.5rem 1rem;
+  }
+  
+  .about-page h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-page h3 {
+    font-size: 1.5rem;
+  }
+  
+  .about-page p {
+    font-size: 1.1rem;
+  }
+  
+  .about-page p:first-of-type {
+    font-size: 1.2rem;
+  }
+  
+  .about-page ul li {
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+  }
+  
+  .about-page ul li::before {
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+.about-page ul li:focus {
+  outline: 2px solid #138808;
+  outline-offset: 2px;
+}
+
+/* Container for better content width management */
+.about-page > * {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-page h3:last-of-type,
+.about-page p:last-of-type {
+  max-width: 1400px;
 }
