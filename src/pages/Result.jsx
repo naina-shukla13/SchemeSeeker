@@ -28,7 +28,7 @@ const matchedSchemes = schemes.filter(scheme => {
   const isGenderMatch = !gend || gend.includes(gender);
   const isAgeMinOk = !ageMin || age >= ageMin;
   const isAgeMaxOk = !ageMax || age <= ageMax;
-  const isStateMatch = !schemeStates || schemeStates.includes(state) || schemeStates("All India");
+  const isStateMatch = !schemeStates || schemeStates.includes(state) || schemeStates.includes("All India");
   const isIncomeMinOk = !incomeMin || income >= incomeMin;
   const isIncomeMaxOk = !incomeMax || income <= incomeMax;
   

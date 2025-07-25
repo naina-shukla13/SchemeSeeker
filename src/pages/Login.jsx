@@ -14,19 +14,29 @@ const Login = () => {
       [e.target.name]: e.target.value
     }));
   };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
+  try {
+    const response = await axios.post("http://localhost:5000/api/auth/login", formData);
+    
+    // ✅ Save token and user info to localStorage
+    localStorage.setItem("token", response.data.token);
+    localStorage.setItem("user", JSON.stringify(response.data.user));
 
-    try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", formData);
-      localStorage.setItem("token", response.data.token); // ✅ store token for protected routes
-      navigate("/dashboard"); // ✅ change this to your protected route later
-    } catch (err) {
-      setError(err.response?.data?.message || "Login failed");
+    // ✅ Redirect based on user role
+    if (response.data.user.isAdmin) {
+      navigate("/admin"); // Admin-only route
+    } else {
+      navigate("/dashboard"); // Normal user dashboard
     }
+  } catch (err) {
+    setError(err.response?.data?.message || "Login failed");
   }
+};
+
+
 
   return (
     <div className="auth-form-container">

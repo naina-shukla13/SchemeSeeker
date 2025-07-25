@@ -10,6 +10,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import AllSchemes from './pages/Schemes';
+import AdminPanel from './pages/Admin';
+import AdminRoute from './components/ProtectedRoute';
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/home' element={<Home />} />
       <Route path='/schemes' element={<AllSchemes/>} />
+      <Route path='/admin' element={<AdminRoute><AdminPanel /></AdminRoute>} />
 
     </Routes>
       
