@@ -1,0 +1,119 @@
+{
+  "appName": "SchemeSeeker",
+  "tagline": "Find government schemes easily",
+  "login": "Login",
+  "register": "Register",
+  "submit": "Submit",
+  "language": "Language",
+  "selectLanguage": "Select Language",
+  "formTitle": "Check Your Eligibility",
+  "name": "Name",
+  "category": "Category",
+  "education": "Education Level",
+
+
+  "heroHeading": "Find Government Schemes You're Eligible For",
+  "heroSubheading": "Personalized government scheme suggestions in seconds",
+  "checkEligibility": "Check Your Eligibility",
+
+  "feature1Title": "Personalized Matching",
+  "feature1Desc": "Match your profile to the most relevant government schemes",
+
+  "feature2Title": "Comprehensive Database",
+  "feature2Desc": "Hundreds of verified central and state welfare programs",
+
+  "feature3Title": "Local Language Support",
+  "feature3Desc": "View scheme details in your regional language for clarity",
+
+  "feature4Title": "Instant Eligibility Tool",
+  "feature4Desc": "Instantly know which schemes you qualify for, no paperwork required",
+
+  "howItWorks": "How It Works",
+  "howSubtext": "Our AI system helps you find matching schemes in just 3 simple steps.",
+
+  "step1Title": "Enter Your Details",
+  "step1Desc": "Provide information about income, region, education...",
+
+  "step2Title": "Analysis",
+  "step2Desc": "We check your profile with 500+ government schemes.",
+
+  "step3Title": "Get Results",
+  "step3Desc": "You get a list of matched schemes instantly in your language",
+
+  "supportedSchemes": "Supported Government Schemes",
+
+  "footerTagline": "Connecting citizens to the schemes they deserve.",
+  "about": "About",
+  "contact": "Contact",
+  "terms": "Terms",
+  "privacy": "Privacy",
+  "rights": "All rights reserved.",
+
+  "eligibilityTitle": "Check Your Eligibility",
+
+  "fullName": "Full Name",
+  "fullNamePlaceholder": "Enter your full name",
+
+  "age": "Age",
+  "agePlaceholder": "Enter your age",
+
+  "gender": "Gender",
+  "selectGender": "Select Gender",
+
+  "occupation": "Occupation",
+  "selectOccupation": "Select Occupation",
+
+  "state": "State",
+  "selectState": "Select State",
+
+  "city": "City",
+  "cityPlaceholder": "Enter your city",
+
+  "income": "Annual Income (INR)",
+  "incomePlaceholder": "Enter your annual income",
+
+  "checkEligibilityBtn": "Check Eligibility",
+
+  "aboutTitle": "About SchemeSeeker",
+  "aboutIntro": "SchemeSeeker is a platform that helps Indian citizens discover government welfare schemes they may be eligible for — quickly, simply, and in one place.",
+
+  "whyTitle": "Why We Built SchemeSeeker",
+  "whyDesc": "Many people miss out on valuable government schemes due to lack of awareness or access. Our mission is to close that gap using smart technology and accessibility.",
+
+  "whoTitle": "Who Can Use This?",
+  "whoStudent": "Students",
+  "whoFarmer": "Farmers",
+  "whoWomenSenior": "Women & Senior Citizens",
+  "whoWorkers": "Workers & Job Seekers",
+  "whoAnyone": "Anyone who wants to access benefits they qualify for",
+
+  "howTitle": "How It Works",
+  "howDesc": "You simply enter your basic details — age, income, region, and occupation — and our platform shows you possible schemes you may be eligible for.",
+  
+  "navHome": "Home",
+  "navAbout": "About",
+  "navSchemes": "Schemes",
+  "navSignup": "Sign Up",
+   "signupTitle": "Sign Up",
+  "signupName": "Full Name",
+  "signupEmail": "Email Address",
+  "signupPassword": "Create Password",
+  "signupButton": "Sign Up",
+  "signupFooter": "Already have an account?",
+  "signupSignIn": "Sign In",
+  "signupError": "Registration failed",
+  "loginTitle": "Login",
+  "loginEmail": "Email Address",
+  "loginPassword": "Password",
+  "loginButton": "Login",
+  "loginFooter": "Don’t have an account?",
+  "loginSignUp": "Sign Up",
+  "loginError": "Login failed",
+  "schemesTitle": "Government Schemes",
+  "seeAll": "See All Schemes ▼",
+  "showLess": "Show Less ▲"
+}
+
+
+
+

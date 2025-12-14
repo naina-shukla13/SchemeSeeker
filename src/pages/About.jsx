@@ -1,34 +1,36 @@
 import React from 'react';
-import '../styles/about.css'; 
+import '../styles/about.css';
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+
+  const { t } = useTranslation();
+
   return (
     <div className="about-page">
-      <h2>About SchemeSeeker</h2>
+      <h2>{t("aboutTitle")}</h2>
+
       <p>
-        SchemeSeeker is a platform that helps Indian citizens discover government welfare schemes 
-        they may be eligible for — quickly, simply, and in one place.
+        {t("aboutIntro")}
       </p>
 
-      <h3>Why We Built SchemeSeeker</h3>
+      <h3>{t("whyTitle")}</h3>
       <p>
-        Many people miss out on valuable government schemes due to lack of awareness or access. 
-        Our mission is to close that gap using smart technology and accessibility.
+        {t("whyDesc")}
       </p>
 
-      <h3>Who Can Use This?</h3>
+      <h3>{t("whoTitle")}</h3>
       <ul>
-        <li>Students</li>
-        <li>Farmers</li>
-        <li>Women & Senior Citizens</li>
-        <li>Workers & Job Seekers</li>
-        <li>Anyone who wants to access benefits they qualify for</li>
+        <li>{t("whoStudent")}</li>
+        <li>{t("whoFarmer")}</li>
+        <li>{t("whoWomenSenior")}</li>
+        <li>{t("whoWorkers")}</li>
+        <li>{t("whoAnyone")}</li>
       </ul>
 
-      <h3>How It Works</h3>
+      <h3>{t("howTitle")}</h3>
       <p>
-        You simply enter your basic details — age, income, region, and occupation — and our 
-        platform shows you possible schemes you may be eligible for.
+        {t("howDesc")}
       </p>
     </div>
   );
